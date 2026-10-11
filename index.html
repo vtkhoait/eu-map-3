@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <title>Bản Đồ Châu Âu Cố Định</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -478,8 +480,6 @@
     *{ transition:none !important; }
   }
 </style>
-</head>
-<body>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -1159,7 +1159,7 @@ function buildSnapshotPayload(onReady){
     const time = now.toLocaleString('vi-VN', {hour:'2-digit',minute:'2-digit',day:'2-digit',month:'2-digit'});
     const stamp = now.toISOString().slice(0,19).replace(/[:T]/g,'-');
     const totalColored = state.colored.size + LOCKED_COUNT;
-    const filename = 'ban-do-chau-au_' + totalColored + '-45_' + stamp + '.' + exportFormat;
+    const filename = 'ban-do-co-dinh-v3_' + totalColored + '-45_' + stamp + '.' + exportFormat;
     const description = selectedCountriesDescription();
 
     canvas.toBlob(async function(blob){
@@ -1392,6 +1392,7 @@ refresh();
 applyZoom();
 renderGallery();
 </script>
+
 
 </body>
 </html>
